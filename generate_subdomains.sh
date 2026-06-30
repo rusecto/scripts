@@ -18,8 +18,8 @@ FILE=""
 OUTPUT_FILE=""
 
 # Parse command line options
-# getopts "d:f:h": This tells Bash to look for -d, -f, and -h. The colons (:) mean that -d and -f require a value right after them.
-# ${OPTARG}: This is a built-in variable that captures the value passed to the flag (e.g., if you type -d example.com, OPTARG becomes example.com).
+# getopts "d:f:h": This tells Bash to look for -d, -f, o, and -h. The colons (:) mean that -d,-f and -o require a value right after them.
+# ${OPTARG}: This is a built-in variable that captures the value passed to the flag.
 while getopts "d:f:o:h" opt; do
 	case "${opt}" in
 		d) DOMAIN="${OPTARG}" ;;
